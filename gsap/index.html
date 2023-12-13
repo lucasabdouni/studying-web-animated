@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1 id="title">GSAP</h1>
+
+  <section class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <script>
+    const container = document.querySelector('.container')
+    const items = document.querySelectorAll('.item')
+
+    // muda o elemento padrão
+    // gsap.set(container,{
+    //   y: 200,
+    //   ease: "elastic.inOut(1,0.3)",
+    //   duration: 5
+    // })
+
+    // começa no elemento padrão e vai termina assim
+    // gsap.to(container,{
+    //   y: 200,
+    //   ease: "elastic.inOut(1,0.3)",
+    //   duration: 5
+    // })
+
+    // começa assim e vai para o elemento padrão
+    // gsap.from(container,{
+    //   y: 200,
+    //   ease: "elastic.inOut(1,0.3)",
+    //   duration: 5
+    // })
+
+    //determina inicio e fim do elemento
+    // gsap.fromTo(container, 5, {
+    //   //configs iniciais
+    //   y: -100
+    // }, {
+    //   //configs finais
+    //   y: 100,
+    //   ease: "bounce.inOut"
+    // })
+
+    // determina inicio ou  o fim do elemento e manipula tempo com delay e é aplicado em listar(array)
+    // TweenMax.staggerTo(items, 1, {
+    //   scale: 1,
+    //   rotate: '360deg',
+    // }, 2);
+
+    TweenMax.staggerFromTo(items, 1, {
+      scale: 0,
+      rotate: '0deg',
+    },{
+      scale: 1,
+      rotate: '360deg',
+    }, 0.3);
+  </script>
+    
+</body>
+</html>

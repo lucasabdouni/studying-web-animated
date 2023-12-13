@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #0c0c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  height: 300px;
+  margin: 0 auto;
+  border: 1px solid red;
+  display: flex;
+}
+
+.item {
+  width: 240px;
+  height: 90%;
+  margin: 5px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  transform: scale(0);
+}
+
+h1 {
+  color: #ccc;
+  margin: 16px 0px;
+}
+
+p {
+  color: #ccc;
+  margin-bottom: 16px;
+}/*# sourceMappingURL=style.css.map */
