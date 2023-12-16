@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP Scroll Trigger</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <section class="container">
+    <h1 class="title">GSAP: Plugin ScrollTrigger</h1>
+  </section>
+
+  <section class="container">
+    <div class="square"></div>
+    <div class="square2"></div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".square", {
+      x: 1000,
+      duration: 10,
+      scrollTrigger: {
+        trigger: '.square',
+        start: 'top 40%',
+        end: 'bottom 15%',
+
+        // scrub: elemento acompanha o scroll
+        scrub: true,
+
+        // toggleActions: controla as ações ao ultrapassar os markers
+        // toggleActions: 'play pause resume complete',
+        // toggleActions: 'onEnter OnLeaver OnEnterBack OnLeaveBack',
+        
+        // mantem o elemento fixo até terminar o markers
+        pin: true,
+        
+        // mostra a linha de start e end.
+        markers: true,
+      }
+    })
+
+  </script>
+    
+</body>
+</html>
